@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+.img-container {
+  float: left;
+  width: 33.33%;    
+  padding: 5px;
+}
+.clearfix::after {
+    /* Lo que escribamos en content saldra despues de haber cerrado el div en el que hemos metido class crearfix */ 
+  content: "me cagon toh";
+    /* La propiedad CSS clear especifica si un elemento puede estar al lado de elementos flotantes que lo preceden o si debe ser movido (cleared) debajo de ellos.
+    - both : Es un keyword que indica que el elemento es movido hacia abajo para limpiar tanto elementos flotantes de la izquierda como de la derecha. */
+  clear: both;
+    /* La propiedad CSS display especifica el tipo de cuadro de representación utilizado para un elemento.
+    - table : Estos elementos se comportan como elementos HTML <table>. Define un cuadro de nivel de bloque.*/
+  display: table;
+}
+</style>
+</head>
+<body>
+
+<h2>Images Side by Side</h2>
+<p>Float images side by side:</p>
+
+<div class="clearfix">
+  <div class="img-container">
+  <img src="rosa.jpg" alt="Italy" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="rosa_tambien.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="madremiamadremia.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+
+<p>Note that we also use the clearfix hack to take care of the layout flow, and that we add the box-sizing property to make sure that the image container doesn't break due to extra padding. Try to remove this code to see the effect.</p>
+
+</body>
+</html>
