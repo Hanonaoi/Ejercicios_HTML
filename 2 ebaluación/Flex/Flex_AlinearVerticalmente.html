@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  height: 200px;
+  /* Para alinear los div's verticalmente */
+
+    /* align-items: center; / Alinearlos en el centro */
+    /* align-items: flex-start; / Alinearlos al principio del flex */
+    /* align-items: flex-end; / Alinearlos al final del flex */
+    /* align-items: stretch; / que cojan todo de arriba a abajo y cojan toda la medida*/
+    /* align-items: baseline; / Alinear los divs en base a la linea de texto
+<div class="flex-container">
+<div><h1>1</h1></div>
+<div><h6>2</h6></div>
+<div><h3>3</h3></div>  
+<div><small>4</small></div>  
+</div>  */
+  align-items: center;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+<h1>The align-items Property</h1>
+
+<p>The "align-items: center;" aligns the flex items in the middle of the container:</p>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+</body>
+</html>
