@@ -1,0 +1,33 @@
+<!--
+Ejecuta en el servidor, el servidor lo valida. / formulario
+
+Formularios empiezan por form y acaban por form. Tiene un atributo muy importante que es el action. q pone a q pagina vamos a enviar los datos.
+Dentro tendremos diferentes input's (3) en este caso y dentro hay diferentes tipos donde podemos escribir texto. Name seria una variable y value lo que es predeterminado.
+Para hacer el boton submit lo mismo pero en vez de text el type seria submit.
+
+El fichero action page no existe asiq envia pero no pasa nada. Necesitariamos una aplicacion q recogiese ese dato./ el imput text name es el que nos va a diferenciar que es lo que va dentro de nombre y que es lo que no va dentro de el.
+
+Con apache en marcha nos funciona la parte PHP.
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<!-- cambiar -> /action_page.php "a" echo.php (tienen que estar en la misma carpeta los 2 archivos -->
+<form action="echo.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html>
