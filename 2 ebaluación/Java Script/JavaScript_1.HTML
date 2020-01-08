@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change HTML content.</p>
+
+<p id="demo2">JavaScript can change HTML content.</p>
+                            <!-- dentro de las comillas simples podemos tener dobles -->     <!--el (innerHTML) coge lo q tiene dentro, para asi reemplazar el contenido-->
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript 2!"'>Click Me 2!</button>
+
+<button type="button" onclick='document.getElementById("demo2").innerHTML = "Hello JavaScript 3!"'>Click Me 3!</button>
+
+<!--En lo anterior jugamos con los 2 parrafos y los 3 botones. Con los primeros 2 botones cambiamos el primer parrafo con diferentes oraciones y 
+con el tercer boton cambiamos el segundo-->
+<br>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<!--  (F12) en la parte de arriba entramos en console y ejecutamos el javascript -> podemos escribir
+document.getElementById("demo").innerHTML = "Kaixo"-->
+</body>
+</html>
