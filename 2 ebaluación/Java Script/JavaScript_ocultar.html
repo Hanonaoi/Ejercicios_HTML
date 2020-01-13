@@ -1,0 +1,88 @@
+
+<html>
+<body>
+    
+<!--
+En la consola de internet (f12)
+
+document. siempre para empezar
+-->
+
+<!-- My Image = Todos los ('myImage') tienen que llamarse igual porque estas dando una orden de cambiar 1 imagen a otra y a otra por eso tiene q llamarse igual -->
+    <button Id="Button1" onclick="document.getElementById('myImage').src='RedLip_Ejercicio2.png'">RedLip</button>
+
+    <img id="myImage" src="RedLip_Ejercicio2.png" style="width:100px">
+    
+    <button Id="Button2" onclick="document.getElementById('myImage').src='No_Ejercicio2.png'">No</button>
+    
+    <button Id="Button3" type="button" onclick="document.getElementById('myImage').style.display='none'">Click Me!</button> 
+    <!--Con este ultimo lo que haremos sera ocultar la imagen cuando hagamos click en el boton nuevo-->
+
+
+
+
+<!-- Para hacer desaparecer una imagen
+document.getElementById("demo").style.display = "none"; -->
+<!-- Para hacerlo aparecer
+document.getElementById("demo").style.display = "block";-->
+
+<!--
+
+Esto seria para hacer desaparecer en la consola
+
+    para comentar dentro de javascript //  COMENTARIO  //
+    document.getElementById("myImage").style.display = "none"
+
+Si metemos lo mismo dentro de una script lo ejecutaremos desde el html
+<script>
+    document.getElementById("myImage").style.display = "none"
+</script>
+-->
+
+<!--
+
+<script>
+    document.getElementById("Button1").style.display = "none";
+    document.getElementById("Button2").style.display = "none";
+    document.getElementById("Button3").style.display = "none";
+</script>
+
+-->
+
+
+FUNCION
+
+EMPIEZA POR function
+
+<button id="Boton0" onclick="mostrar()">Start</button>
+
+<script>
+function ocultar() {
+    document.getElementById("Button1").style.display = "none";
+    document.getElementById("Button2").style.display = "none";
+    document.getElementById("Button3").style.display = "none";
+}
+
+function mostrar() {
+    document.getElementById("Button1").style.display = "Inline";
+    document.getElementById("Button2").style.display = "Inline";
+    document.getElementById("Button3").style.display = "Inline";
+    document.getElementById("Boton0").style.display = "none";
+}
+
+ocultar();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
