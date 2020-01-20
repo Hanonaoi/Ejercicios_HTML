@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <style>
+    .solid {
+        border-style: solid;
+        width: 140px;
+    }    
+    </style>
+</head>
 <body>
 
 <H1>Calculadora</H1>
 
-<input type="text" id="Resultado">
-<br>
+<p class="solid" id="Resultado">0</p>
 <br>
 <br>
 <input type="text" id="Cifra1">
@@ -13,40 +20,42 @@
 <input type="text" id="Cifra2">
 <br>
 
-<button id="boton+" value="Sumar" onclick="document.getElementById('Resultado').value">+</button>
-<button id="boton-" onclick="">-</button>
-<button id="botonC" onclick="">C</button>
+<button type="button" id="boton+" onclick="suma()" >+</button>
+<button type="button" id="boton-" onclick="resta()">-</button>
+<button type="button" id="botonC" onclick="borrar()">C</button>
 
 
 <script>
-
+                        // para coger algo siempre (document.getElementById(el ID).value(para el valor) ) //
 function suma ()
-{
-    var numero1=Number(document.getElementById('Cifra1').value);
-    var numero2=Number(document.getElementById('Cifra2').value);
 
-    var resultado=num1+num2;
-    document.getElementById('Resultado').value=res
+{   numero1 = document.getElementById('Cifra1').value;
+    numero2 = document.getElementById('Cifra2').value;
+    numero1 = parseInt(numero1);
+    numero2 = parseInt(numero2);
+
+    document.getElementById('Resultado').innerHTML = numero1 + numero2;
 }
 
 function resta ()
-{
-    var numero1=Number(document.getElementById('Cifra1').value);
-    var numero2=Number(document.getElementById('Cifra2').value);
+{           // Number es para hacer lo mismo que parseInt //
+    numero1=Number(document.getElementById('Cifra1').value);
+    numero2=Number(document.getElementById('Cifra2').value);
 
-    var resultado=num1-num2;
-    document.getElementById('Resultado').value=res
+    document.getElementById('Resultado').innerHTML = numero1 - numero2;
 }
 
 function borrar ()
-{
-    Var
+{                                       //porque es un parrafo en vez de un boton//
+    document.getElementById('Resultado').innerHTML = 0;
+    document.getElementById('Cifra1').value = "";
+    document.getElementById('Cifra2').value = "";
 }
 
 </script>
 
 
-
+<!-- X= document.getElementById("Cifra1").value -->
 
 
 
