@@ -19,13 +19,70 @@ if (x==y){
 x=3
 y=6
 z=8
+
+if ((x<=y) && (y<=z))
+        console.log(x+"<="+y+"<="+z);
+    else if ((x<=y) && (z<=y) && (x<=z))
+        console.log(x+"<="+z+"<="+y);
+    else if ((x<=y) && (z<=y) && (z<=x))
+        console.log(z+"<="+x+"<="+y);
+    else if ((y<=x) && (y<=z) && (x<=z))
+        console.log(y+"<="+x+"<="+z);
+    else if ((y<=x) && (y<=z) && (z<=x))
+        console.log(y+"<="+Z+"<="+X);
+    else if ((y<=x) && (z<=y))
+        console.log(z+"<="+y+"<="+x);
+        
+   /*(esta mal) else if ((x<=y) && (y<=z))
+    console.log(x < y < z);
+    else if ((x<=y) && (y<=z))
+    console.log(x < y < z);
+    else if ((x<=y) && (y<=z))
+    console.log(x < y < z); */
+
+
+/* El dibujo (algoritmo) */
+
+function sort_xyz(x, y, z){
+
+if (x<=y) {
+    if (y<=z) {
+        console.log (x+"<="+y+"<="+z);
+    } else { 
+        if (z<=y) {
+            if (x<=z) {
+                console.log (x+"<="+z+"<="+y);    
+            } else {
+                if (z<=x) {
+                    console.log (z+"<="+x+"<="+y);
+                }
+            }
+        }
+    }
+} else {
+    if (y<=x) {
+        if (y<=z) {
+            if (x<=z) {
+                console.log (y+"<="+x+"<="+z);
+            } else {
+                if (z<=x) {
+                    console.log (y+"<="+z+"<="+x);
+                }
+            }
+        } else {
+            if (z<=y) {
+                console.log (z+"<="+y+"<="+x);
+            }
+        }
+    } 
+}
+
+
+}
 </script>
 
 
-
-
-
-
+<!-- 3 cajas y 1 boton (sort) y que ordene todo-->
 
 
 
