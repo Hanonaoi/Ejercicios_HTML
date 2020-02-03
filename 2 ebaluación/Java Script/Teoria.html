@@ -43,40 +43,55 @@ if ((x<=y) && (y<=z))
 
 /* El dibujo (algoritmo) */
 
+x=1
+y=23
+z=15
+
+
 function sort_xyz(x, y, z){
-
-if (x<=y) {
-    if (y<=z) {
-        console.log (x+"<="+y+"<="+z);
-    } else { 
-        if (z<=y) {
-            if (x<=z) {
-                console.log (x+"<="+z+"<="+y);    
-            } else {
-                if (z<=x) {
-                    console.log (z+"<="+x+"<="+y);
-                }
-            }
-        }
-    }
-} else {
-    if (y<=x) {
+    s="";
+    if (x<=y) {
         if (y<=z) {
-            if (x<=z) {
-                console.log (y+"<="+x+"<="+z);
-            } else {
-                if (z<=x) {
-                    console.log (y+"<="+z+"<="+x);
+            s=x+"<="+y+"<="+z;
+            console.log (s);
+        } else { 
+            if (z<=y) {
+                if (x<=z) {
+                    s=x+"<="+z+"<="+y;
+                    console.log (s);    
+                } else {
+                    s=z+"<="+x+"<="+y;
+                    if (z<=x) {
+                        console.log (s);
+                    }
                 }
             }
-        } else {
-            if (z<=y) {
-                console.log (z+"<="+y+"<="+x);
-            }
         }
-    } 
-}
+    } else {
+        if (y<=x) {
+            if (y<=z) {
+                if (x<=z) {
+                    s=y+"<="+x+"<="+z;
+                    console.log (s);
+                } else {
+                    if (z<=x) {
+                        s=y+"<="+z+"<="+x;
+                        console.log (s);
+                    }
+                }
+            } else {
+                if (z<=y) {
+                    s=z+"<="+y+"<="+x;
+                    console.log (s);
+                }
+            }
+        } 
+    }
 
+// return {x:n1, y:n2, z:n3}; //
+   // s = x+"<="+y+"<="+z; //
+    return s;
+// ordenado.x / .y / .z  ,  ordenado = sort_xyz(2,-3,0) //
 
 }
 </script>
@@ -85,5 +100,36 @@ if (x<=y) {
 <!-- 3 cajas y 1 boton (sort) y que ordene todo-->
 
 
+<!--Debugear -->
+F12
+Sources -> en el menu izquierdo, abrimos el codigo html, que tendra una nuemracion en la izquierda
+para comprobar a partir de un punto elegir el numero de la fila a partir de la cual quieres ver que pasa. Se ejecutara todo lo que este delante de este.
+(podemos abrir la consola y ejecutar los valores de la x), 
 
-<html>
+Abajo tenemos el boton play que ejecutaria lo demas
+El siguiente ejecutaria la linea que tenemos seleccionada (f10)
+El siguiente entra dentro, que seria lo que nos interesaria para entrar dentro de la funcion (f11)
+
+Mas abajo podemos activar, desactivar Breakpoints que pongamos
+
+(si queremos definir una funcion tenemos que ponerlo antes que el boton, porque ejecuta de arriba abajo)
+
+<!-- 1 primera vez que codificamos una variable se suele poner var, sino no se pone-->
+<script>
+var turno = true
+
+if (turno) {console.log("juega el jugador 1")}
+    juega el jugador 1
+
+turno = !turno;
+/
+var turno = 0;
+if (turno == 0) turno = 1 else turno = 0;
+
+
+   /*if (turno == "uno")
+
+    else 
+        if ----- */
+</script>
+</html>
