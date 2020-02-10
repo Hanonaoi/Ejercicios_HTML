@@ -236,4 +236,121 @@ function he_ganado(jugador){
 
 </script>
 
+
+                    Mover el cuadrado
+
+                    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+        .cuadrado {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            box-shadow: 10px 10px;
+            position:absolute; /* para que el cuadrado de mueva */
+            top:"0px";    /* Donde empieza en cuadrado */
+            left:"0px";   /* */
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="cuadrado1" class="cuadrado"></div>
+
+    <script>
+
+
+        function keyboard (key) {      // cada vez q pulses el teclado, se activa esto
+            console.log(key.keyCode)  // si ponemos este codigo en consola y pulsamos una tecla nos saldra el numero que corresponde a esta tecla
+                                    
+               
+            if (key.keyCode == 39) {
+                console.log("right");
+                x = x + dx; 
+            } else if (key.keyCode == 37) {
+                console.log("left")
+                x = x - dx; 
+            } else if (key.keyCode == 38) {
+                console.log("top")
+                y = y - dy; 
+            } else if (key.keyCode == 40) {
+                console.log("down")
+                y = y + dy; 
+            }
+
+            c1.style.left = x + "px";
+            c1.style.top = y + "px";
+            
+        }
+
+
+        // main program
+
+        //
+        c1 = document.getElementById("cuadrado1");
+        document.addEventListener("keydown", keyboard)
+        //
+        x = 15;        // lo que se movera el cuadrado cada vez que pulsemos cada tecla
+        dx = 10;
+        y = 15;
+        dy = 10;
+        c1.style.left = x + "px";         //en el estilo marcamos left y right , y al añadir el px automaticamente mueve el elemento 
+        c1.style.top = y + "px";
+        //
+    
+        
+    </script>
+
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------
+                            JUEGO DE CARTAS
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="mostrar_cartas()">ON</button>
+
+<img id="carta_as" src="as.png" style="width:100px">
+<img id="carta_K" src="K.png" style="width:100px">
+<img id="carta_Q" src="Q.png" style="width:100px">
+
+<button onclick="ocultar_cartas()">OFF</button>
+
+<script>
+    function ocultar_cartas() {
+        document.getElementById('carta_as').src='reverso.png'; 
+        document.getElementById('carta_K').src='reverso.png';
+        document.getElementById('carta_Q').src='reverso.png';
+    }
+    
+    function mostrar_cartas() {
+        document.getElementById('carta_as').src='as.png';
+        document.getElementById('carta_K').src='K.png';
+        document.getElementById('carta_Q').src='Q.png';
+    }
+    
+</script>
+
+
+</body>
+</html>
+
+                    Forma de generar numero aleatorio
+
+<script>
+    r = math.floor(math.random() * 10); //en este caso nos saldra un numero del 1 al 9 porque hemos marcado el 10
+    console.log(r);
+</script>
+
 </html>
