@@ -18,12 +18,24 @@
             left:"20px";   /* */
         }
         .bloque1 {
-            width: 60px;
-            height: 20px;
+            width: 1500px;
+            height:700px;
             background-color: rgb(129, 217, 251);
-            top:"10px";    
-            left:"20px";
+            position:static;
+            top:"0px";    
+            left:"0px";
         }
+        .bloque2 {
+            width: 20px;
+            height:60px;
+            background-color: rgb(103, 83, 192);
+            position:inherit; 
+            top: 0px;   
+            right: 100px;
+        }
+        
+
+
     </style>
 
 </head>
@@ -32,7 +44,9 @@
     <div id="cuadrado1" class="cuadrado"></div>
 
     <div id="bloque-1" class="bloque1"></div>
- 
+    <div id="bloque-2" class="bloque2"></div>
+    
+    
     <script>
 
 
@@ -66,9 +80,9 @@
         c1 = document.getElementById("cuadrado1");
         document.addEventListener("keydown", keyboard)
         //
-        x = 0;        // lo que se movera el cuadrado cada vez que pulsemos cada tecla
+        x = 20;        // lo que se movera el cuadrado cada vez que pulsemos cada tecla
         dx = 20;
-        y = 0;
+        y = 20;
         dy = 20;
         c1.style.left = x + "px";         //en el estilo marcamos left y right , y al añadir el px automaticamente mueve el elemento 
         c1.style.top = y + "px";
