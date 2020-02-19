@@ -22,28 +22,47 @@
 
 </head>
 <body>
-    <svg class="Varnimyr" width="768" height="512" id="Varnimyr"></svg> <!-- svg -> es el entorno en el que saldra la aplicacion-->
-        <g id="fondo" class="Fondo"> <!--el elemento g sirve para separar los elementos, contendra la imagen guia por eso le pongo ID de fondo-->
-        <img src="Imagen_Completa.png" width="768" height="512" x="200" y="100"></g> <!-- "x" y "y" marcan la posición -->
-        <g><img src="Pieza1.png" class="movil"></g> <!--Todas las piezas del puzle-->
-        <g><img src="Pieza2.png" class="movil"></g>
-        <g><img src="Pieza3.png" class="movil"></g>
-        <g><img src="Pieza4.png" class="movil"></g>
-        <g><img src="Pieza5.png" class="movil"></g>
-        <g><img src="Pieza6.png" class="movil"></g>
-        <g><img src="Pieza7.png" class="movil"></g>
-        <g><img src="Pieza8.png" class="movil"></g>
-    
+<!--    <svg class="Varnimyr" width="768" height="512" id="entorno"> <!-- svg -> es el entorno en el que saldra la aplicacion-->
+       <!-- <g id="fondo" class="Fondo"> <!--el elemento g sirve para separar los elementos, contendra la imagen guia por eso le pongo ID de fondo-->
+       <!-- <image src="Imagen_Completa.png" width="768" height="512" x="200" y="100"></g> <!-- "x" y "y" marcan la posición -->
+       <!-- <g><image src="Pieza1.png" class="movil"></g> <!--Todas las piezas del puzle 
+        <g><image src="Pieza2.png" class="movil"></g>
+        <g><image src="Pieza3.png" class="movil"></g>
+        <g><image src="Pieza4.png" class="movil"></g>
+        <g><image src="Pieza5.png" class="movil"></g>
+        <g><image src="Pieza6.png" class="movil"></g>
+        <g><image src="Pieza7.png" class="movil"></g>
+        <g><image src="Pieza8.png" class="movil"></g>
+    </svg>
+-->
+
+<svg width="600" height="600" id="entorno">
+    <g id="fondo"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master//pikachu.png" width="400" height="400" x="200" y="100"></g>
+<g class="padre" id="0"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/1.png" class="movil"></g>
+<g class="padre" id="1"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/2.png" class="movil"></g>
+<g class="padre" id="2"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/3.png" class="movil"></g>
+<g class="padre" id="3"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/4.png" class="movil"></g>
+<g class="padre" id="4"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/5.png" class="movil"></g>
+<g class="padre" id="5"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/6.png" class="movil"></g>
+<g class="padre" id="6"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/7.png" class="movil"></g>
+<g class="padre" id="7"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/8.png" class="movil"></g>
+<g class="padre" id="8"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/9.png" class="movil"></g>
+</svg>
+<audio id="win" src="https://raw.githubusercontent.com/NestorPlasencia/PikaPuzzle/master/media/win.mp3"></audio>
+
+
+
+
 <script>
 
 var piezas = document.getElementsByClassName('movil'); //Con esto guardamos en una variable todos los elementos que tengan la clase 'movil'
 
-var Anchura = [193,191,191,191,194,190,192,190];  // Arrais con todas las anchuras y alturas de las piezas 
-var Altura = [252,254,257,257,254,253,255,256];
+var tamWidh = [193,191,191,191,194,190,192,190];  // Arrais con todas las anchuras y alturas de las piezas 
+var tamHeight = [252,254,257,257,254,253,255,256];
 
 for(var i=0;i<piezas.length;i++){   // recorrido por todas las piezas
-	piezas[i].setAttribute("width", Anchura[i]);  // Con set atribute agregamos a cada pieza su altura y anchura respectiva
-	piezas[i].setAttribute("height", Altura[i]);
+	piezas[i].setAttribute("width", tamWidh[i]);  // Con set atribute agregamos a cada pieza su altura y anchura respectiva
+	piezas[i].setAttribute("height", tamHeight[i]);
 	piezas[i].setAttribute("x", Math.floor((Math.random() * 10) + 1));
 	piezas[i].setAttribute("y", Math.floor((Math.random() * 409) + 1));
 	piezas[i].setAttribute("onmousedown","seleccionarElemento(evt)"); 
