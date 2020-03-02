@@ -44,7 +44,7 @@ body {
 }
 
 .cartas.flip {
-  transform: rotateY(180deg); /* para que la carta rote sobre si sin ser deformado */
+  transform: rotateY(180deg); /* para que la carta rote sobre si en el eje Y sin ser deformado */
 }
 
 .frontal,
@@ -66,7 +66,7 @@ body {
 </head>
 <body>
   <section class="juegomemoria">
-    <div class="cartas" data-framework="Adrian"> <!--Para darle ID-->
+    <div class="cartas" data-framework="Adrian"> <!--Le pondremos un ID a la carta-->
       <img class="frontal" src="Adrian.png" alt="Adrian" /> <!-- Alt es para especificar un texto alternativo a la imagen.-->
       <img class="reverso" src="reverso.png" alt="Reverso" />
     </div>
@@ -140,16 +140,16 @@ body {
   </section>
 
 <script>
-const cards = document.querySelectorAll('.cartas'); /* Llama cards a del documento todo lo que tenga clas cartas. */
+const cards = document.querySelectorAll('.cartas'); /* Llama cards a del documento todo lo que tenga class cartas. */
 let hagirado = false; /*Para que no haga nada mientras muestra las dos cartas. Let es una variable que puede cambiar. */
 let blocmesa = false;
-let primcarta, segcarta; /* crrear variable de las 2 cartas. */
+let primcarta, segcarta; /* crear variable de las 2 cartas. */
 
 function girarcarta() { /*Para que espere hasta la segunda carta, mira si hay una o dos elegidas y compara. */
-  if (blocmesa) return; 
+  if (blocmesa) return; /* con el if-return haremos que puedas seguir haciendo acciones hasta que elijas 2 cartas. */
   if (this === primcarta) return; /* this es la carta clicada, si clicas otra el valor de clic cambiara. */
 
-  this.classList.add('flip'); 
+  this.classList.add('flip');  /* Para que la carta rote. */
 
   if (!hagirado) { /*Para la primera carta. */
     hagirado = true;
@@ -173,7 +173,7 @@ function desacartas() { /* Si se da la casualidad de que las seleccionadas son i
   reiniciarmesa(); /* reiniciar para poder volver a seleccionar las primera y segunda cartas. */
 }
 
-function ungirarcartas() { /*compara y si son iguales las deja. */
+function ungirarcartas() { /* En esta opción las cartas no son las mismas entonces tendremos que hacer q vuelvan a voltearse. */
   blocmesa = true; /* para no poder elegir mas cartas que 2. */
 
   setTimeout(() => {
