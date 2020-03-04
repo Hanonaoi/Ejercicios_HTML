@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="Sanctuary.png"> <!--Para cambiar el icono de la pestaña-->
+<title>ELSWORD</title>
+<style>
+* { /* Todos empezaran por esto */
+  padding: 0;/*Para quitar el predeterminado*/
+  margin: 0;
+  box-sizing: border-box; /*Características basadas en el tamaño de la ventana
+  Si haces la ventana mas pequeña, las letras e imagenes se mueven para estar centrado.*/
+}
+
+body {
+   height:100%;
+   width:100%;
+   background-image:url(WaterSanctuary.png); 
+   background-repeat:no-repeat;  /*Con esto fijamos el fondo*/
+   background-size:cover; /* Con esto haremos que cubra la pantalla el fondo */
+}
+.juegomemoria {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.cartas {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d; /* Que va a preservar su posición 3D */
+  transition: transform .5s;  /* el tiempo que tarda en voltear la carta por su cuenta (cuando no eliges bien), al haber puesto .5 es como si fuese un 0.5 */
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.cartas:active {
+  transform: scale(0.97); 
+  transition: transform .2s; /* el tiempo que tarda en voltear la carta al clicar, al haber puesto .2 es como si fuese un 0.2 */
+}
+
+.cartas.flip {
+  transform: rotateY(180deg); /* para que la carta rote sobre si en el eje Y sin ser deformado */
+}
+
+.frontal,
+.reverso {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: rgb(224, 159, 197);
+  backface-visibility: hidden;
+}
+
+.frontal {
+  transform: rotateY(180deg);
+}
+</style>
+
+</head>
+<body>
+  <section class="juegomemoria">
+    <div class="cartas" data-framework="Adrian"> <!--Le pondremos un ID a la carta-->
+      <img class="frontal" src="Adrian.png" alt="Adrian" /> <!-- Alt es para especificar un texto alternativo a la imagen.-->
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+    <div class="cartas" data-framework="Adrian">
+      <img class="frontal" src="Adrian.png" alt="Adrian" />
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+
+    <div class="cartas" data-framework="Denif">
+      <img class="frontal" src="Denif.png" alt="Denif" />
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+    <div class="cartas" data-framework="Denif">
+      <img class="frontal" src="Denif.png" alt="Denif" />
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+
+    <div class="cartas" data-framework="Gaia">
+      <img class="frontal" src="Gaia.png" alt="Gaia" />
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+    <div class="cartas" data-framework="Gaia">
+      <img class="frontal" src="Gaia.png" alt="Gaia" />
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+
+    <div class="cartas" data-framework="Ventus">
+      <img class="frontal" src="Ventus.png" alt="Ventus" />
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+    <div class="cartas" data-framework="Ventus">
+      <img class="frontal" src="Ventus.png" alt="Ventus" />
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+
+    <div class="cartas" data-framework="Herbaon">
+      <img class="frontal" src="Herbaon.png" alt="Herbaon" />
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+    <div class="cartas" data-framework="Herbaon">
+      <img class="frontal" src="Herbaon.png" alt="Herbaon" />
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+
+    <div class="cartas" data-framework="Hernia">
+      <img class="frontal" src="Hernia.png" alt="Hernia" />
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+    <div class="cartas" data-framework="Hernia">
+      <img class="frontal" src="Hernia.png" alt="Hernia" />
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+
+    <div class="cartas" data-framework="Rosso">
+      <img class="frontal" src="Rosso.png" alt="Rosso" />
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+    <div class="cartas" data-framework="Rosso">
+      <img class="frontal" src="Rosso.png" alt="Rosso" />
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+
+    <div class="cartas" data-framework="Solace">
+      <img class="frontal" src="Solace.png" alt="Solace" />
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+    <div class="cartas" data-framework="Solace">
+      <img class="frontal" src="Solace.png" alt="Solace" />
+      <img class="reverso" src="reverso.png" alt="Reverso" />
+    </div>
+  </section>
+
+<script>
+const cards = document.querySelectorAll('.cartas'); /* Llama cards a del documento todo lo que tenga class cartas. */
+let hagirado = false; /*Para que no haga nada mientras muestra las dos cartas. Let es una variable que puede cambiar. */
+let blocmesa = false;
+let primcarta, segcarta; /* crear variable de las 2 cartas. */
+
+function girarcarta() { /*Para que espere hasta la segunda carta, mira si hay una o dos elegidas y compara. */
+  if (blocmesa) return; /* con el if-return haremos que puedas seguir haciendo acciones hasta que elijas 2 cartas. */
+  if (this === primcarta) return; /* this es la carta clicada, si clicas otra el valor de clic cambiara. */
+
+  this.classList.add('flip');  /* Para que la carta rote. */
+
+  if (!hagirado) { /*Para la primera carta. */
+    hagirado = true;
+    primcarta = this; 
+  return; }
+
+  segcarta = this; /* Cuando segcarta = this, cuando la segunda carta sea clicada llamaremos a la función iguales. */
+  iguales();
+}
+
+function iguales() { /* Compararemos las dos cartas y si estas son exactamente iguales se quedaran bocaarriba. */
+  let isMatch = primcarta.dataset.framework === segcarta.dataset.framework;
+
+  isMatch ? desacartas() : ungirarcartas(); /* las dos respuestas validas de la comparación de las cartas son desacartas y la segunda ungirarcartas. */
+}
+
+function desacartas() { /* Si se da la casualidad de que las seleccionadas son iguales se les quitara la opción de que puedan ser clicadas para voltearlas. */
+  primcarta.removeEventListener('click', girarcarta);
+  segcarta.removeEventListener('click', girarcarta);
+
+  reiniciarmesa(); /* reiniciar para poder volver a seleccionar las primera y segunda cartas. */
+}
+
+function ungirarcartas() { /* En esta opción las cartas no son las mismas entonces tendremos que hacer q vuelvan a voltearse. */
+  blocmesa = true; /* para no poder elegir mas cartas que 2. */
+
+  setTimeout(() => {
+    primcarta.classList.remove('flip'); /* quitamos el flip que habiamos hecho en la primera y segunda cartas. */
+    segcarta.classList.remove('flip');
+
+    reiniciarmesa(); /* reiniciar para poder volver a seleccionar las primera y segunda cartas. */
+  }, 1500); //tiempo en el que las cartas volveran a estar tapadas. */
+}
+
+function reiniciarmesa() {
+  [hagirado, blocmesa] = [false, false]; /* hagirado lo pondremos en false para cancelar los giros de las cartas y blocmesa false para poder elegir las cartas y que la mesa no este bloqueada. */
+  [primcarta, segcarta] = [null, null];  /* tendras otra vez primera y segunda cartas disponibles. */
+}
+
+(function mezclar() { /* Pondremos esta función entre parentesis para llamar a esta función al iniciar la pagina. Con la función mezclaremos las cartas y que estas aparezcan en distinto orden cada vez que entremos. */
+  cards.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 16);
+    card.style.order = randomPos;
+  });
+})(); /* es necesario hacer () al finalizar todo para que no contamine. */
+
+cards.forEach(card => card.addEventListener('click', girarcarta)); /*On click, para que las cartas tengan la opcion de ser clicadas. */
+
+</script>
+</body>
+</html>
+
