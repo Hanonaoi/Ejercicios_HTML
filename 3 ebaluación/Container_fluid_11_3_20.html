@@ -1,0 +1,40 @@
+.container / .container-fluid (este cogeria toda la pantalla) 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Esto es para que se mantenga a los moldes -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> <!-- Coge los estilos de boostrap y las siguientes 3 scripts son librerias de javascript. El orden es importante, porque la ultima requiere de la primera y al reves.-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+
+
+<div class="container">  <!-- El container lleva contenido dentro de el, lo hace fijo -->
+    <h1>My First Bootstrap Page</h1>
+    <p>This is some text.</p>
+</div>
+
+
+<div class="container-fluid"> 
+    <h1>My First Bootstrap Page</h1>
+    <p>This is some text.</p>
+</div>
+
+
+<div class="container-fluid p-3 my-3 border"></div>  <!-- El p-3 (pading) marca el padding del container, el atributo y la m (margin) marca el margen del container. https://getbootstrap.com/docs/4.0/utilities/spacing/ -->
+
+<div class="container p-3 my-3 bg-dark text-white"></div>
+
+<div class="container p-3 my-3 bg-primary text-white"></div>
+
+
+</body>
+</html>
