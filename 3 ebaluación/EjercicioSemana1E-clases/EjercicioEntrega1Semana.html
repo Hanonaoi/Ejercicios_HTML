@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>World of Warcraft</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<!--Contenedor fluido para que coja todo el ancho de página. 
+    Display-1 son titulos mas finos y mas alargados -->   
+  <div class="container-fluid">
+    <h1 class="display-1">World of Warcraft</h1>
+    <p>Es un juego en el que los jugadores controlan un avatar dentro de un mundo en una vista de tercera persona (con
+      la opción de jugar en
+      primera persona) explorando el entorno, combatiendo contra varios monstruos y jugadores, completando misiones e
+      interactuando con personajes no jugables (PNJ) u otros jugadores. El completar misiones ayudará a los jugadores a
+      poder subir de nivel y de esta forma, podrán conseguir equipamiento que les ayudará más adelante a combatir a las
+      distintas criaturas que vayan apareciendo en su camino.</p>
+  </div>
+
+
+  <a href="https://worldofwarcraft.com/es-es/" class="btn btn-primary" role="button">World Of Warcraft</a>
+  <!--Boton con link direccionando a la página principal del WoW-->
+
+  <br>
+  <br>
+
+  <!--text-primary para colorear el texto de azul y text-danger para colorear el texto rojo -->
+  <div class="container-fluid">
+    <h1>Facciones</h1>
+    <p>Existen un total de trece razas jugables​ divididas en dos facciones, la <h class="text-primary">Alianza</h> y la <h class="text-danger">Horda</h>, siendo la
+      decimotercera raza (Pandaren) compartida por ambos bandos. Pertenecen a la <h class="text-primary">Alianza</h>: humanos, gnomos, enanos, elfos
+      de la noche, draenéi, huarguens y pandarens; y pertenecen a la <h class="text-danger">Horda</h>: orcos, no-muertos renegados, troles,
+      taurens, elfos de sangre, goblins y pandarens. En la mayoría de las zonas, la <h class="text-primary">Alianza</h> y la <h class="text-danger">Horda</h> están en guerra
+      una con la otra, aunque existen zonas neutrales como la ciudad flotante de Dalaran o la Ciudadela de Shattrath,
+      estas zonas son conocidas como santuarios.</p>
+  </div>
+
+  <!--Grids de 2 columnas a los cuales le he dado diferentes bg-colors  -->
+  <div class="row">
+    <div class="col">
+      <h1 class="bg-primary text-white">ALIANZA</h1>
+    </div>
+    <div class="col">
+      <h1 class="bg-danger text-white">HORDA</h1>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!--tablas, con color negro de fondo y bordeada cada celda. Dentro de las celdas he puesto bg color a los titulos, y en el body he metido imagenes centradas-->
+  <table class="table table-dark table-bordered ">
+    <thead>
+      <tr class="table-info">
+        <th><kbd>HUMANO</kbd></th>
+        <th><kbd>ENANO</kbd></th>
+        <th><kbd>ELFO DE LA NOCHE</kbd></th>
+        <th><kbd>GNOMO</kbd></th>
+        <th><kbd>DRAENEI</kbd></th>
+        <th><kbd>HUARGEN</kbd></th>
+        <th><kbd>PANDAREN</kbd></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-info">
+        <td><img src="1HUMANO.png" class="mx-auto d-block"></td>
+        <td><img src="2ENANO.png" class="mx-auto d-block"></td>
+        <td><img src="3ELFO_NOCHE.png" class="mx-auto d-block"></td>
+        <td><img src="4GNOMO.png" class="mx-auto d-block"></td>
+        <td><img src="5DRAENEI.png" class="mx-auto d-block"></td>
+        <td><img src="6HUARGEN.png" class="mx-auto d-block"></td>
+        <td><img src="7PANDAREN.png" class="mx-auto d-block"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-dark table-bordered ">
+    <thead>
+      <tr class="table-danger">
+        <th><kbd>ORCO</kbd></th>
+        <th><kbd>NO-MUERTO</kbd></th>
+        <th><kbd>TAUREN</kbd></th>
+        <th><kbd>TROL</kbd></th>
+        <th><kbd>ELFO DE SANGRE</kbd></th>
+        <th><kbd>GOBLIN</kbd></th>
+        <th><kbd>PANDAREN</kbd></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-danger">
+        <td><img src="1ORCO.png" class="mx-auto d-block"></td>
+        <td><img src="2MUERTO.png" class="mx-auto d-block"></td>
+        <td><img src="3TAUREN.png" class="mx-auto d-block"></td>
+        <td><img src="4TROL.png" class="mx-auto d-block"></td>
+        <td><img src="5ELFO_SANGRE.png" class="mx-auto d-block"></td>
+        <td><img src="6GOBLIN.png" class="mx-auto d-block"></td>
+        <td><img src="7PANDAREN2.png" class="mx-auto d-block"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+
+
+
