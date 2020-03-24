@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>World of Warcraft</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    /* Para hacer la imagen del carousel de pantalla entera */
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+
+</head>
+
+<body>
+
+  <!-- Para hacer una barra de navegación usaremos el class navbar.-->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Para meter una imagen la cual usare como lolo hay que poner un img scr.-->
+    <img src="LOGO.png" alt="logo" style="width:40px;">
+  
+    <!--Para meter un link dentro del navbar tendremos que meter un "ul" con la class "navbar-nav", seguido de un "li" con la class "nav-item" y para acabar
+    le metemos la "a" con la class "nav-link" con la que meteremos el link.-->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="https://worldofwarcraft.com/es-es/game/races">RAZAS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://worldofwarcraft.com/es-es/game/classes">CLASES</a>
+      </li>
+  
+      <!--Le metere un dropdown para que tengamos un desplegable con diferentes opciones -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">EXPANSIONES</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="https://worldofwarcraft.com/es-es/shadowlands">SHADOWLANDS</a>
+          <a class="dropdown-item" href="https://worldofwarcraft.com/es-es/battle-for-azeroth">BATTLE FOR AZEROTH</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  
+  
+    
+
+  <!--Contenedor fluido para que coja todo el ancho de página. 
+    Display-1 son titulos mas finos y mas alargados -->   
+  <div class="container-fluid">
+    <h1 class="display-1">World of Warcraft</h1>
+    <p>Es un juego en el que los jugadores controlan un avatar dentro de un mundo en una vista de tercera persona (con
+      la opción de jugar en
+      primera persona) explorando el entorno, combatiendo contra varios monstruos y jugadores, completando misiones e
+      interactuando con personajes no jugables (PNJ) u otros jugadores. El completar misiones ayudará a los jugadores a
+      poder subir de nivel y de esta forma, podrán conseguir equipamiento que les ayudará más adelante a combatir a las
+      distintas criaturas que vayan apareciendo en su camino.</p>
+  </div>
+
+
+
+  <!-- He metido un popover que explicara lo del boton de abajo -->
+  <div class="container-fluid">
+    <a href="#" title="Sylvanas" data-toggle="popover" data-content="Conoce un poco mas a Sylvanas actual Jefa de Guerra de la Horda">Sylvanas</a><br>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $('[data-toggle="popover"]').popover();   
+    });
+  </script>
+
+
+  <!-- Para hacer un boton el cual sera desplegable y nos saltara un texto. -->
+  <div class="container-fluid">
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Sylvanas Jefa de Guerra</button>
+    <div id="demo" class="collapse">
+      <br>
+      <p>Sylvanas Brisaveloz es una de las figuras más controvertidas de la Horda, una líder hermética que inspira pavor y asombro por igual en aquellos que luchan a su lado. </p>
+      <p>Sylvanas fue otrora la General Forestal de Lunargenta: una comandante encargada de defender el reino de los elfos nobles de Quel'Thalas. Demostró su capacidad de liderazgo cuando la Plaga de no-muertos del Rey Exánime atacó su nación. Aunque Sylvanas luchó con valentía, cayó ante los profanos invasores. Arthas Menethil, caballero de la Muerte de la Plaga, le arrebató el alma y la transformó en un alma en pena, un fantasma vengativo obligado a servir al Rey Exánime.
+      Un año después, Sylvanas recuperó la libertad. Iba acompañada de muchos otros no-muertos que habían huido del control del Rey Exánime. Sylvanas los llamó «Renegados», y ella se autoproclamó su «Reina alma en pena». En aras de cimentar un futuro para sus seguidores, Sylvanas se unió a la Horda. Más adelante, ella y sus Renegados se unieron a sus nuevos aliados durante la invasión de Rasganorte, contribuyeron a la derrota del Rey Exánime y saciaron su sed de venganza.
+      Sylvanas ha seguido protegiendo a los Renegados de toda amenaza, en su hogar o en cualquier lugar del cosmos. Después de que un Vol'jin moribundo le encomendara el cargo de Jefa de Guerra, consiguió reunir a la Horda para derrotar a la Legión en las Islas Abruptas y en Argus.
+      El descubrimiento en Silithus del misterioso material conocido como azerita ha devuelto a Sylvanas una vez más a la senda de la guerra. Resuelta a impedir que la Alianza se hiciera con el control de esta poderosa sustancia, la Jefa de Guerra dio el primer golpe con el asalto de la Horda a Darnassus, un ataque brutal que ha dejado muy claro a la Alianza lo que hay en juego. </p>     
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container-fluid">
+    <a href="https://worldofwarcraft.com/es-es/" class="btn btn-primary" role="button">World Of Warcraft</a>
+    <!--Boton con link direccionando a la página principal del WoW-->
+  </div>
+
+  <br>
+ 
+  <!-- El carousel para hacer unas imagenes que vallan pasando y que puedas pasar con clicks.-->
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+      <li data-target="#demo" data-slide-to="3"></li>
+      <li data-target="#demo" data-slide-to="4"></li>
+      <li data-target="#demo" data-slide-to="5"></li>
+      <li data-target="#demo" data-slide-to="6"></li>
+      <li data-target="#demo" data-slide-to="7"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Burning crusade.jpg" alt="Burning Crusade" width="800" height="500">
+        <div class="carousel-caption">
+          <h3>Burning Crusade</h3>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="Wrath of the lich king.jpg" alt="Wrath of the Lich King" width="800" height="300">
+        <div class="carousel-caption">
+          <h3>Wrath of the Lich King</h3>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="Cataclysm.jpg" alt="Cataclysm" width="800" height="500">
+        <div class="carousel-caption">
+          <h3>Cataclysm</h3>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="Mists of pandaria.jpg" alt="Mists of Pandaria" width="800" height="500">
+        <div class="carousel-caption">
+          <h3>Mists of Pandaria</h3>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="Warlords of draenor.jpg" alt="Warlords of Draenor" width="800" height="500">
+        <div class="carousel-caption">
+          <h3>Warlords of Draenor</h3>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="Legion.jpg" alt="Legion" width="800" height="500">
+        <div class="carousel-caption">
+          <h3>Legion</h3>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="Battle for azeroth.jpeg" alt="Battle for Azeroth" width="800" height="500">
+        <div class="carousel-caption">
+          <h3>Battle for Azeroth</h3>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="Shadowlands.jpg" alt="Shadowlands" width="800" height="500">
+        <div class="carousel-caption">
+          <h3>Shadowlands</h3>
+        </div>   
+      </div>
+    </div>
+      
+    <a class=" carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class=" carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+
+  </div>
+
+  <br>
+  <br>
+
+
+
+  <div class="container-fluid">
+  <!--text-primary para colorear el texto de azul y text-danger para colorear el texto rojo -->
+    <div class="card-columns">
+      <div class="card bg-info">
+        <div class="card-body text-center">
+          <p class="card-text"><h1>FACCIONES</h1></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container-fluid">
+    <p>Existen un total de trece razas jugables​ divididas en dos facciones, la <h class="text-primary">Alianza</h> y la <h class="text-danger">Horda</h>, siendo la
+    decimotercera raza (Pandaren) compartida por ambos bandos. Pertenecen a la <h class="text-primary">Alianza</h>: humanos, gnomos, enanos, elfos
+    de la noche, draenéi, huarguens y pandarens; y pertenecen a la <h class="text-danger">Horda</h>: orcos, no-muertos renegados, troles,
+    taurens, elfos de sangre, goblins y pandarens. En la mayoría de las zonas, la <h class="text-primary">Alianza</h> y la <h class="text-danger">Horda</h> están en guerra
+    una con la otra, aunque existen zonas neutrales como la ciudad flotante de Dalaran o la Ciudadela de Shattrath,
+    estas zonas son conocidas como santuarios.</p>
+  </div>
+
+
+
+  <!--Grids de 2 columnas a los cuales le he dado diferentes bg-colors  -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1 class="bg-primary text-white">ALIANZA</h1>
+      </div>
+      <div class="col">
+        <h1 class="bg-danger text-white">HORDA</h1>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!--tablas, con color negro de fondo y bordeada cada celda. Dentro de las celdas he puesto bg color a los titulos, y en el body he metido imagenes centradas-->
+  <div class="container-fluid">
+    <table class="table table-dark table-bordered ">
+      <thead>
+        <tr class="table-info">
+          <th><kbd>HUMANO</kbd></th>
+          <th><kbd>ENANO</kbd></th>
+          <th><kbd>ELFO DE LA NOCHE</kbd></th>
+          <th><kbd>GNOMO</kbd></th>
+          <th><kbd>DRAENEI</kbd></th>
+          <th><kbd>HUARGEN</kbd></th>
+          <th><kbd>PANDAREN</kbd></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-info">
+          <td><img src="1HUMANO.png" class="mx-auto d-block"></td>
+          <td><img src="2ENANO.png" class="mx-auto d-block"></td>
+          <td><img src="3ELFO_NOCHE.png" class="mx-auto d-block"></td>
+          <td><img src="4GNOMO.png" class="mx-auto d-block"></td>
+          <td><img src="5DRAENEI.png" class="mx-auto d-block"></td>
+          <td><img src="6HUARGEN.png" class="mx-auto d-block"></td>
+          <td><img src="7PANDAREN.png" class="mx-auto d-block"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table table-dark table-bordered ">
+      <thead>
+        <tr class="table-danger">
+          <th><kbd>ORCO</kbd></th>
+          <th><kbd>NO-MUERTO</kbd></th>
+          <th><kbd>TAUREN</kbd></th>
+          <th><kbd>TROL</kbd></th>
+          <th><kbd>ELFO DE SANGRE</kbd></th>
+          <th><kbd>GOBLIN</kbd></th>
+          <th><kbd>PANDAREN</kbd></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-danger">
+          <td><img src="1ORCO.png" class="mx-auto d-block"></td>
+          <td><img src="2MUERTO.png" class="mx-auto d-block"></td>
+          <td><img src="3TAUREN.png" class="mx-auto d-block"></td>
+          <td><img src="4TROL.png" class="mx-auto d-block"></td>
+          <td><img src="5ELFO_SANGRE.png" class="mx-auto d-block"></td>
+          <td><img src="6GOBLIN.png" class="mx-auto d-block"></td>
+          <td><img src="7PANDAREN2.png" class="mx-auto d-block"></td>
+        </tr>
+      </tbody>
+    </table> 
+  </div>
+
+
+  <br>
+  <br>
+
+  <!-- con las cards podremos meter imagenes o textos en una especie de cajas con bordes y algo de padding alrededor. -->
+  <div class="container-fluid">
+    <div class="card-columns">
+      <div class="card bg-info">
+        <div class="card-body text-center">
+          <p class="card-text"><h1>DIOSES ANTIGUOS</h1></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!-- En los cards he metido imagenes, un toast que aparecera desde el inicio con informacion de las imagenes en los cards que podremos quitar dandole a la x.-->
+  <div class="container-fluid">
+    <div class="card-deck"  style="width:1800px;">
+      <div class="card bg-primary">
+        <div class="card-body text-center">
+          <button type="button" class="btn btn-primary" id="myBtn">C'THUN</button>
+          <br>
+          <a><img src="C'THUN.png" style="width:350px;"></a>
+          <div class="toast" data-autohide="false">
+            <div class="toast-header">
+              C'THUN
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+            </div>
+            <div class="toast-body">
+              <p>Dios antiguo de los Qiraji</p>
+              Templo de Ahn'Qiraj
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-warning">
+        <div class="card-body text-center">
+          <button type="button" class="btn btn-warning" id="myBtn">YOGG-SARON</button>
+          <br>
+          <a><img src="YOGG-SARON.png" style="width:350px;"></a>
+          <div class="toast" data-autohide="false">
+            <div class="toast-header">
+              YOGG-SARON
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+            </div>
+            <div class="toast-body">
+              <p>Dios antiguo de la muerte</p>
+              Prision de YOGG-SARON, Ulduar
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-success">
+        <div class="card-body text-center">
+          <button type="button" class="btn btn-success" id="myBtn">Y'SHAARJ</button>
+          <br>
+          <a><img src="Y'SHAARJ.png" style="width:350px;"></a>
+          <div class="toast" data-autohide="false">
+            <div class="toast-header">
+              Y'SHAARJ
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+            </div>
+            <div class="toast-body">
+              <p>Dios antiguo de los Klaxxi</p>
+              Pandaria
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-danger">
+        <div class="card-body text-center">
+          <button type="button" class="btn btn-danger" id="myBtn">N'ZOTH</button>
+          <br>
+          <a><img src="N'ZOTH.png" style="width:350px;"></a>
+          <div class="toast" data-autohide="false">
+            <div class="toast-header">
+              N'ZOTH
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+            </div>
+            <div class="toast-body">
+              <p>El corruptor, Dios antiguo de las profundidades</p>	
+              Ny'alotha
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Script para que el toast funcione-->
+  <script>
+    $(document).ready(function(){
+      $('.toast').toast('show');
+    });
+    </script>
+
+  <br>
+  <br>
+
+  <div class="container-fluid">  
+    <!-- Botton que te abrira el modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Animacion de la Reina Azshara</button>
+  
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Lider de Guerra Reina Azshara</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <!-- Dentro de este modal he metido un video -->
+          <div class="modal-body">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7iS9t91btQA"></iframe>
+            </div>
+          </div>
+    
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" data-toggle="tooltip" data-placement="top" title="Pero miralo so marrana!" class="btn btn-danger" data-dismiss="modal">Close :3 </button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <br>
+  <br>
+</body>
+</html>
+
+
+
