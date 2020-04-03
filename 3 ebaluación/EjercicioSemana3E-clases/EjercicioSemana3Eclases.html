@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form action="echoT.php">
+<br>
+<br>
+<div class="container-fluid">  
+  <div class="form-group">
+    <label for="uname">Usuario:</label>
+    <input type="text" class="form-control" id="uname" placeholder="Insertar Usuario" name="uname" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Campo necesario.</div>
+  </div>
+  <div class="form-group">
+    <label for="pwd">Contraseña:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Insertar Contraseña" name="Contraseña" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">No compartas tu contraseña.</div>
+  </div>
+  <div class="from-group">
+    <label for="mail">Email:</label>
+    <input type="text" class="form-control" placeholder="Tu email" id="mail" name="email">
+    <div class="input-group-append">
+      <span class="input-group-text">@example.com</span>
+    </div>
+  </div>
+  <br>
+  <div class="form-group form-check">
+    <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" name="Recuerdame" required> Recuerdame.
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Mantenme dentro.</div>
+    </label>
+  </div>      
+</div>
+<br>
+
+
+
+<div class="container-fluid">
+  <h2>FARANDULA EN ESPAÑA</h2>
+  <h4>Selecciona de las "divas" que aparecen a continuación las que jugaron o juegan un papel importante en españa.</h4>
+  <div class="card-deck">
+    <div class="card bg-primary">
+      <div class="card-body text-center">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="Vecinas" value="Vecinas">Vecinas de Valencia
+        </label>
+        <br>
+        <br>
+        <a><img src="Vecinas.jpg" style="width:350px;"></a>
+      </div>
+    </div>
+    <div class="card bg-warning">
+      <div class="card-body text-center">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="Veneno" value="Veneno">Cristina Ortiz
+        </label>
+        <br>
+        <br>
+        <a><img src="veneno.jpg" style="width:350px;"></a>
+      </div>
+    </div>
+    <div class="card bg-success">
+      <div class="card-body text-center">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="Aramis" value="Aramis">Aramis Fuster
+        </label>
+        <br>
+        <br>
+        <a><img src="Aramis.jpg" style="width:350px;"></a>
+      </div>
+    </div>
+    <div class="card bg-danger">
+      <div class="card-body text-center">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="Polo" value="Polo">Ana Maria Polo
+        </label>
+        <br>
+        <br>
+        <a><img src="Caso.jpg" style="width:350px;"></a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="card-deck">
+    <div class="card bg-danger">
+      <div class="card-body text-center">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input"  name="Esteban" value="Esteban">Belen Esteban
+        </label>
+        <br>
+        <br>
+        <a><img src="Belen.jpg" style="width:350px;"></a>
+      </div>
+    </div>
+    <div class="card bg-success">
+      <div class="card-body text-center">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="Saavedra" value="Saavedra">Miriam Saavedra
+        </label>
+        <br>
+        <br>
+        <a><img src="Miriam.jpg" style="width:350px;"></a>
+      </div>
+    </div>
+    <div class="card bg-warning">
+      <div class="card-body text-center">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" disabled>Soraya Arneles  <!--El disable es adrede, a la soraya esq no la trago -->
+        </label>
+        <br>
+        <br>
+        <a><img src="Soraya.jpg" style="width:350px;"></a>
+      </div>
+    </div>
+    <div class="card bg-primary">
+      <div class="card-body text-center">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="Verka" value="Verka">Verka
+        </label>
+        <br>
+        <br>
+        <a><img src="verka.jpg" style="width:350px;"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+
+<div class="container-fluid">
+  <h4>¿Que sabes de las grandes divas seleccionadas en los recuadros anteriores?</h4>
+  <br>
+  <br>
+    <div class="form-group">
+      <label for="comment"><h5>Comment:</h5></label>
+      <textarea class="form-control" rows="5" id="comment" name="Text"></textarea>
+    </div>
+</div>
+
+<br>
+<br>
+
+
+<div class="container-fluid">
+  <h2>LA SIRENITA DE LA LINEA</h2>
+  <a><img src="Sirenita.jpg"></a>
+  <br>
+  <br>
+  <h4>De donde te sientes mas cercano de Torremolinos o de Venalmadena</h4>
+  <h5>Izquierda para Torremolinos derecha para Venalmadena</h5>
+    <div class="form-group">
+      <input type="range" class="custom-range" id="customRange" name="Sirenita">
+    </div>
+    <br>
+    <br>
+    <h5>Adjuntar memes de la España profunda (no quiero unga-unga)</h5>
+    <div class="custom-file mb-3">
+      <input type="file" class="custom-file-input" id="customFile" name="Famous">
+      <label class="custom-file-label" for="customFile">Selecciona imagen</label>
+    </div>
+</div>
+
+<script>
+  // Add the following code if you want the name of the file appear on select
+  $(".custom-file-input").on("change", function() {
+    var fileName = $(this).val().split("\\").pop();
+    $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+  });
+</script>
+
+<br>
+<br>
+
+<div class="container-fluid">
+  <h2>EUROVISION</h2>
+  <br>
+  <h4>Que canción ganadora de los últimos 10 años te gusta mas.</h4>
+  <br>
+  <div class="form-check">
+    <label class="form-check-label" for="radio1">
+      <input type="radio" class="form-check-input" id="radio1" name="Año" value="option1">2010 Lena - Satellite
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label" for="radio2">
+      <input type="radio" class="form-check-input" id="radio2" name="Año" value="option2">2011 Ell/Nikki - Running Scared
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label" for="radio3">
+      <input type="radio" class="form-check-input" id="radio3" name="Año" value="option3">2012 Loreen - Euphoria
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label" for="radio4">
+      <input type="radio" class="form-check-input" id="radio4" name="Año" value="option4">2013 Emmelie De Forest - Only Teardrops
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label" for="radio5">
+      <input type="radio" class="form-check-input" id="radio5" name="Año" value="option5">2014 Conchita Wurst - Rise Like a Phoenix
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label" for="radio6">
+      <input type="radio" class="form-check-input" id="radio6" name="Año" value="option6">2015 Måns Zelmerlöw - Heroes
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="radio" class="form-check-input" disabled>2016 Jamala - 1944  <!-- Estas tambien son disable, vaya mojones -->
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="radio" class="form-check-input" disabled>2017 Salvador Sobral - Amar Pelos Dois
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label" for="radio9">
+      <input type="radio" class="form-check-input" id="radio8" name="Año" value="option7">2018 Netta - Toy 
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label" for="radio10">
+      <input type="radio" class="form-check-input" id="radio9" name="Año" value="option8">2019 Duncan Laurence - Arcade
+    </label>
+  </div>
+</div>
+<br>
+<br>
+<div class="container-fluid">
+  <h4>Puntua la canción seleccionada en la pregunta anterior.</h4>
+  <div class="form-group">
+    <br>
+    <label for="sel1">Puntua del 1 al 10:</label>
+    <select class="form-control" id="sel1" name="Puntuación">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+  </div>
+</div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+<button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+</body>
+</html>
